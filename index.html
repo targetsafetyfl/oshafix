@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSHA Fix • Fix Violations Fast</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: system-ui, sans-serif; }
+    .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/id/1015/2000/1200'); background-size: cover; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- NAV -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-3xl font-bold text-orange-600">OSHA<span class="text-blue-700">Fix</span></div>
+      <a href="#order" class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-xl font-semibold">Get Fixed Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero text-white py-28">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h1 class="text-5xl md:text-6xl font-bold leading-tight">Got an OSHA Violation?<br>Fix It in One Place</h1>
+      <p class="mt-6 text-2xl">Compliance kits • Training • Documents • Consultants<br>All dropshipped. Zero hassle.</p>
+      <a href="#kits" class="mt-10 inline-block bg-white text-orange-600 hover:bg-gray-100 font-bold text-xl px-10 py-5 rounded-2xl shadow-xl">Browse Compliance Kits →</a>
+    </div>
+  </section>
+
+  <!-- VIOLATIONS -->
+  <section class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="text-4xl font-bold text-center mb-12">Top 10 Violations We Fix Daily</h2>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+      <div class="bg-white p-6 rounded-2xl shadow">Fall Protection</div>
+      <div class="bg-white p-6 rounded-2xl shadow">Lockout/Tagout</div>
+      <div class="bg-white p-6 rounded-2xl shadow">Hazard Communication</div>
+      <div class="bg-white p-6 rounded-2xl shadow">Machine Guarding</div>
+      <div class="bg-white p-6 rounded-2xl shadow">PPE Requirements</div>
+      <!-- Add more if you want -->
+    </div>
+  </section>
+
+  <!-- KITS -->
+  <section id="kits" class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Ready-to-Fix Compliance Kits</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Kit 1 -->
+        <div class="border border-gray-200 rounded-3xl overflow-hidden hover:shadow-2xl transition">
+          <img src="https://picsum.photos/id/201/600/400" alt="Fall Protection Kit" class="w-full">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold">Fall Protection Compliance Kit</h3>
+            <p class="text-gray-600 mt-3">Harness + anchor + training + written program + signage</p>
+            <div class="mt-6 text-4xl font-bold">$849 <span class="text-sm font-normal text-gray-500">one-time</span></div>
+            <button onclick="orderKit('Fall Protection Kit - $849')" class="mt-8 w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 rounded-2xl">Order Now – Ships Direct</button>
+          </div>
+        </div>
+
+        <!-- Kit 2 -->
+        <div class="border border-gray-200 rounded-3xl overflow-hidden hover:shadow-2xl transition">
+          <img src="https://picsum.photos/id/237/600/400" alt="Lockout Tagout Kit" class="w-full">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold">Lockout/Tagout Full Compliance Kit</h3>
+            <p class="text-gray-600 mt-3">Kit + labels + training video + program template</p>
+            <div class="mt-6 text-4xl font-bold">$1,199</div>
+            <button onclick="orderKit('Lockout/Tagout Kit - $1,199')" class="mt-8 w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 rounded-2xl">Order Now – Ships Direct</button>
+          </div>
+        </div>
+
+        <!-- Kit 3 -->
+        <div class="border border-gray-200 rounded-3xl overflow-hidden hover:shadow-2xl transition">
+          <img src="https://picsum.photos/id/180/600/400" alt="PPE Starter Kit" class="w-full">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold">PPE & HazCom Starter Kit</h3>
+            <p class="text-gray-600 mt-3">Everything for a quick OSHA fix</p>
+            <div class="mt-6 text-4xl font-bold">$499</div>
+            <button onclick="orderKit('PPE & HazCom Starter Kit - $499')" class="mt-8 w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 rounded-2xl">Order Now – Ships Direct</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER FORM -->
+  <section id="order" class="bg-gray-900 text-white py-16">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-8">Tell Us What You Need Fixed</h2>
+      <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST" class="space-y-6">
+        <input type="text" name="kit" id="kit-name" placeholder="Kit name" class="w-full px-6 py-4 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-orange-500" required>
+        <input type="text" name="name" placeholder="Your Name" class="w-full px-6 py-4 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-orange-500" required>
+        <input type="email" name="email" placeholder="Company Email" class="w-full px-6 py-4 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-orange-500" required>
+        <input type="text" name="company" placeholder="Company Name" class="w-full px-6 py-4 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-orange-500">
+        <textarea name="notes" rows="4" placeholder="OSHA violation details or special requests" class="w-full px-6 py-4 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-orange-500"></textarea>
+        <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-6 text-xl rounded-3xl">Submit Order – We’ll Contact You in <1 Hour</button>
+      </form>
+      <p class="text-center text-gray-400 mt-6 text-sm">You pay only after we confirm the kit. We handle dropshipping.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="max-w-6xl mx-auto px-6 py-16 text-center">
+    <h2 class="text-4xl font-bold mb-12">How It Works (3 Steps)</h2>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div><div class="text-6xl mb-4">1</div><h3 class="font-semibold">You order</h3><p>We get the request instantly</p></div>
+      <div><div class="text-6xl mb-4">2</div><h3 class="font-semibold">We order from supplier</h3><p>They ship straight to you (2–7 days)</p></div>
+      <div><div class="text-6xl mb-4">3</div><h3 class="font-semibold">You get paid & compliant</h3><p>Peace of mind + proof for OSHA</p></div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-white py-12 text-center">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-2xl font-bold">OSHA Fix • Zero Inventory • Real Compliance</p>
+      <p class="mt-4">Built for safety professionals, by a safety professional.</p>
+    </div>
+  </footer>
+
+  <script>
+    function orderKit(name) {
+      document.getElementById('kit-name').value = name;
+      document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+    }
+    // Tailwind script already loaded
+  </script>
+</body>
+</html>
